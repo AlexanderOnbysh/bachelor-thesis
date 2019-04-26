@@ -1,0 +1,74 @@
+% зазначаємо стильовий файл, який будемо використовувати
+
+\documentclass{bachelor_thesis}
+% \usepackage{fontspec}
+
+% \usepackage{mathtools}
+
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{bm}
+% \usepackage{pdfpages}
+
+\newcommand{\bigG}{\mathbb{G}}
+\newcommand{\inR}{\in_R}
+\newcommand{\Mod}[1]{\ (\text{mod}\ #1)}
+
+\renewcommand{\floatpagefraction}{.8}
+\DeclareMathOperator{\ind}{ind}
+
+
+% починаємо верстку документа
+\begin{document}
+
+\input{chapters/abstract}
+
+% створюємо зміст
+% \includepdf[pages={-}]{abstract.pdf}
+\pagenumbering{gobble}
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{8}
+
+% створюємо перелік умовних позначень, скорочень і термінів
+
+\input{chapters/shortings}
+\input{chapters/intro}
+
+% висновки
+\input{chapters/conclusions}
+
+\bibliographystyle{ugost2003}
+\bibliography{thesis}
+% % створюємо додатки
+% % перший додаток повинен містити лістинги розроблених програм
+% \append{Лістинги програм}
+
+% % кожний лістинг вставляється в додаток за допомогою спеціальної команди,
+% % перший аргумент якої --- це заголовок, який з'являтиметься в тексті,
+% % другий --- шлях до файлу з лістингом
+% \listing{presenter.h --- прототип пред'явника-вчителя}{SRC/Presenter/presenter.h}
+
+% \listing{presenter.cpp --- реалізація пред'явника-вчителя}{SRC/Presenter/presenter.cpp}
+
+% \input{chapters/appendix_firstrun}
+
+% % останній додаток повинен містити слайди пр\езентації доповіді на захисті дипломної роботи
+% \append{Ілюстративний матеріал}
+
+% \begin{figure}[!htp]%
+% 	\centering
+% 	\includegraphics[scale = 0.43]{PNG/slide1.png}%
+% 	\caption{Слайд 1}%
+% 	\label{fig:p1}%
+% \end{figure}
+
+% \begin{figure}[!htp]%
+% 	\centering
+% 	\includegraphics[scale = 0.455]{PNG/slide2.png}%
+% 	\caption{Слайд 2}%
+% 	\label{fig:p2}%
+% \end{figure}
+
+\end{document}
