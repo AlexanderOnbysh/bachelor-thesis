@@ -1,9 +1,9 @@
-sudo: required
-dist: trusty
+services:
+  - docker: required
 
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+  - docker build -t docs ./docs
 
 script:
 - mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build thesis.tex
+- docker run --mount src=$TRAVIS_BUILD_DIR/,target=/docs,type=bind docs
