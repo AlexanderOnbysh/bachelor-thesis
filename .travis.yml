@@ -3,7 +3,7 @@ language:   generic
 services:   docker
 
 tex-config:
-- build-pattern=./*
+- build-pattern=./thesis.tex
 - packages=cancel, exam
 
 script:
