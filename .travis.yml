@@ -1,0 +1,13 @@
+services:
+  - docker: required
+
+script:
+- docker run --mount src=$TRAVIS_BUILD_DIR/docs,target=/docs,type=bind alexanderonbysh/latex-base bash -c "pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -output-directory=. thesis.tex"
+
+deploy:
+  provider: releases
+  api_key: "$GITHUB_TOKEN"
+  file: "/docs/thesis.pdf"
+  skip_cleanup: true
+  on:
+    branch: master

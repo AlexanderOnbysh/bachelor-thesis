@@ -1,5 +1,5 @@
 % 1. Ідентифікуємо клас
-\ProvidesClass{bachelor_thesis}[2015/12/24 v3.0 Клас для написання пояснювальної записки]
+\ProvidesClass{bachelor_thesis}[]
 \NeedsTeXFormat{LaTeX2e} % потрібний формат
 
 
