@@ -1,12 +1,9 @@
 services:
   - docker: required
 
-before_install:
-  - docker build -t docs ./docs
-
 script:
 - mkdir _build
-- docker run --mount src=$TRAVIS_BUILD_DIR/,target=/docs,type=bind docs bash -c "pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -output-directory=_build thesis.tex"
+- docker run --mount src=$TRAVIS_BUILD_DIR/,target=/docs,type=bind alexanderonbysh/latex-base bash -c "pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -output-directory=_build thesis.tex"
 
 deploy:
   provider: releases
