@@ -1,10 +1,9 @@
-sudo:       required
-language:   generic
-services:   docker
+sudo: required
+dist: trusty
 
-tex-config:
-- build-pattern=./thesis.tex
-- packages=cancel, exam
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
 
 script:
-- docker run --mount src=$TRAVIS_BUILD_DIR/,target=/repo,type=bind strauman/travis-latexbuild:small
+- mkdir _build
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build thesis.tex
