@@ -1,0 +1,9 @@
+numpy
+opencv-contrib-python
+scipy
+matplotlib
+ipython
+jupyter
+torch
+imutils
+requests
