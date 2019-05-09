@@ -1,13 +1,13 @@
 % зазначаємо стильовий файл, який будемо використовувати
 
 \documentclass{bachelor_thesis}
-% \usepackage{fontspec}
 
 % \usepackage{mathtools}
 
 \usepackage{verbatim}
 \usepackage{wrapfig}
 \usepackage{bm}
+\usepackage{scrpage2}
 % \usepackage{pdfpages}
 
 \newcommand{\bigG}{\mathbb{G}}
@@ -17,6 +17,11 @@
 \renewcommand{\floatpagefraction}{.8}
 \DeclareMathOperator{\ind}{ind}
 
+% нумерация в нижнем правом углу
+\ifoot[]{}
+\cfoot[]{}
+\ofoot[\pagemark]{\pagemark}
+\pagestyle{scrplain}
 
 % починаємо верстку документа
 \begin{document}
@@ -35,6 +40,7 @@
 
 \input{chapters/shortings}
 \input{chapters/intro}
+\input{chapters/overview}
 
 % висновки
 \input{chapters/conclusions}
