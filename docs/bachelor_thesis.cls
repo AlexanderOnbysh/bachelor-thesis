@@ -15,13 +15,13 @@
 \RequirePackage[T2A]{fontenc} % пакет для підтримки кирилічних шрифтів
 \RequirePackage[utf8]{inputenc} % пакет для підтримкм Windows'івського кодування cp1251
 \RequirePackage[russian,ukrainian]{babel} % пакет для підтримки української та російської мов
-% \RequirePackage{pscyr} % пакет із гарними кирилічними шрифтами
+\RequirePackage{pscyr} % пакет із гарними кирилічними шрифтами
 \usepackage{tempora}
 \RequirePackage{mathtext} % потрібні символи в режимі математичних формул
 \RequirePackage{amssymb,amsfonts,amsmath,amsthm} % потрібні символи в режимі математичних формул
 \RequirePackage{textcomp} % потрібні символи в режимі математичних формул
 \RequirePackage{upgreek} % пакет для прямих грецьких літер
-%\RequirePackage{pgfplots}
+% \RequirePackage{pgfplots}
 
 
 % графічні пакети
@@ -70,7 +70,7 @@
 \frenchspacing
 \doublespacing % інтервал "1,5" між рядками
 
-%\renewcommand{\rmdefault}{ftm} % задаємо шрифт за промовчанням --- "Times New Roman" із пакету pscyr
+% \renewcommand{\rmdefault}{ftm} % задаємо шрифт за промовчанням --- "Times New Roman" із пакету pscyr
 
 \newcommand{\setfontsize}[1]{\fontsize{#1pt}{#1pt}\selectfont} % команда для задавання розміру шрифта
 \newcommand{\invcommas}[1]{\guillemotleft #1\guillemotright} % команда для французьких кутових лапок
@@ -407,7 +407,7 @@
 
 		\addvspace{6pt}
 
-		зі спеціальності 6.040301 \invcommas{Прикладна математика}
+		зі спеціальності 6.777777 \invcommas{Інженерія програмного забеспечення}
 
 		\begin{singlespace}
 			на тему: \cmdThesis@Title@ThesisTitle
