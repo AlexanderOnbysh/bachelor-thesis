@@ -37,8 +37,15 @@ class KeyPointPredictor:
         return self._prediction(image, bbox)
 
 
-detector = Detector()
-predictor = KeyPointPredictor()
+
+def plot_points(detector, predictor, image: np.ndarray) -> np.ndarray:
+    rects = detector.detect(image)
+    for (i, rect) in enumerate(rects):
+        shape = predictor.predict(image, rect)
+        shape = face_utils.shape_to_np(shape)
+        for (x, y) in shape:
+            cv2.circle(image, (x, y), 2, (0, 255, 0), -1)
+    return image
 
 
 def debug_window(show_bbox: bool = True, show_keypoints: bool = True, show_fps: bool = True):
@@ -48,12 +55,7 @@ def debug_window(show_bbox: bool = True, show_keypoints: bool = True, show_fps: 
     cap = cv2.VideoCapture(0)
     while True:
         _, image = cap.read()
-        rects = detector.detect(image)
-        for (i, rect) in enumerate(rects):
-            shape = predictor.predict(image, rect)
-            shape = face_utils.shape_to_np(shape)
-            for (x, y) in shape:
-                cv2.circle(image, (x, y), 2, (0, 255, 0), -1)
+        image = plot_points(detector, predictor, image)
         cv2.imshow("Output", image)
         k = cv2.waitKey(5) & 0xFF
         if k == 27:
