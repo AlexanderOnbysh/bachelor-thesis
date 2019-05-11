@@ -15,7 +15,7 @@
 \RequirePackage[T2A]{fontenc} % пакет для підтримки кирилічних шрифтів
 \RequirePackage[utf8]{inputenc} % пакет для підтримкм Windows'івського кодування cp1251
 \RequirePackage[russian,ukrainian]{babel} % пакет для підтримки української та російської мов
-\RequirePackage{pscyr} % пакет із гарними кирилічними шрифтами
+% \RequirePackage{pscyr} % пакет із гарними кирилічними шрифтами
 \usepackage{tempora}
 \RequirePackage{mathtext} % потрібні символи в режимі математичних формул
 \RequirePackage{amssymb,amsfonts,amsmath,amsthm} % потрібні символи в режимі математичних формул
