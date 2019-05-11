@@ -100,13 +100,13 @@
 \newcommand{\uchapter}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}}
 
 % для створення вступу використаємо команду \uchapter
-\newcommand{\intro}{\uchapter{Вступ}}
+\newcommand{\intro}{\uchapter{ВСТУП}}
 
 % для створення висновків використаємо команду \uchapter
-\newcommand{\conclusions}{\uchapter{Висновки}}
+\newcommand{\conclusions}{\uchapter{ВИСНОВКИ}}
 
 % для створення переліку умовних позначень використаємо команду \shortings
-\newcommand{\shortings}{\uchapter{Перелік умовних позначень, скорочень і термінів}}
+\newcommand{\shortings}{\uchapter{ПЕРЕЛІК УМОВНИХ ПОЗНАЧЕНЬ, СКОРОЧЕНЬ І ТЕРМІНІВ}}
 
 % хитра команда для створення додатків
 \newcounter{appendnum}
@@ -185,9 +185,9 @@
 
 % тепер задамо відступи для заголовку пункта
 \titlespacing{\subsection} % указуємо, що модифікуємо саме пункт
-			{0.5em} % відступ зліва
-			{48pt} % відступ зверху (2 рядки)
-			{48pt} % відступ знизу (2 рядки)
+			{1em} % відступ зліва
+			{24pt} % відступ зверху (2 рядки)
+			{0pt} % відступ знизу (2 рядки)
 
 % тепер зробимо так, щоб між двома заголовками була звичайна відстань
 % \preto\section{%
@@ -324,7 +324,7 @@
 	\setlength\parsep{0pt}
 	\setlength\topsep{0pt}
 	\setlength\itemsep{0pt}
-	\addcontentsline{toc}{chapter}{Перелік посилань}% додаємо в зміст
+	\addcontentsline{toc}{chapter}{ПЕРЕЛІК ПОСИЛАНЬ}% додаємо в зміст
 	}
 	{
 	\tempbibend
